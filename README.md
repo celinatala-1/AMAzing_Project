@@ -12,4 +12,7 @@ To clean up, run `make clean`.
 
 For instructions on how to run the maze, see the README.md file in the amstartup directory.
 
-Unfortunately my school has closed the server connection, so I am unable to run the  program anymore. 
+Unfortunately my school has closed the server connection, so I am unable to run the program to get example outputs. 
+
+### Code
+The `AMStartup.c` file will first establish a connection to the server, and if successful the server will return the dimensions of the maze we are to solve. Since we are only writing the client side of things, we actually don't know what the maze looks like (we are essentially blind). Thus, to solve the maze, we utilized the right-hand rule where all avatars will follow the wall on their right side. Additionally, since we have multiple avatars in our program, meaning that avatars can simultaneously attempt to move, we also have to utilize multithreading. So we create a thread of avatars to deal with this issue. 
